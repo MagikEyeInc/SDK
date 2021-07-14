@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>607</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MkEDiscovery</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/resources.qrc">
+    <normaloff>:/img/mkelogo</normaloff>:/img/mkelogo</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="logo_label">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resources/resources.qrc">:/img/logos</pixmap>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="info_label">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Magik Eye Sensor Discovery&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;v@VERSION@, (c) Magik Eye Inc, 2016-2021&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;This table lists all sensors available on the local network. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;You can double-click the sensor entry to access &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;the sensor's &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Administration Console&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; via your web browser.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableView" name="device_table"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>About</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Close</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>942</x>
+     <y>599</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>device_table</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>deviceSelected(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>639</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showAboutDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>825</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>deviceSelected(QModelIndex)</slot>
+  <slot>showAboutDialog()</slot>
+ </slots>
+</ui>

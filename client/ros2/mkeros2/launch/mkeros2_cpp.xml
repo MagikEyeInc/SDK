@@ -1,0 +1,6 @@
+<launch>
+  <arg name="mke_args" default="--help"/>
+  <node name = "dummy_node" pkg="mkeros2" exec="mkeros2_node" output="screen" args="$(arg mke_args)">
+    <param from="$(find-pkg-share mkeros2)/config/mkeros2_config.yaml"/>
+  </node>
+</launch>

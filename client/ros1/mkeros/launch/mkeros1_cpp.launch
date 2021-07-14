@@ -1,0 +1,5 @@
+<launch>
+  <rosparam command="load" file="$(find mkeros)/config/mkeros1_config.yaml" />
+  <arg name="mke_args" default="--help"/>
+  <node name="mkeros" pkg="mkeros" type="mkeros1_node" output="screen" args="$(arg mke_args)"/>
+</launch>

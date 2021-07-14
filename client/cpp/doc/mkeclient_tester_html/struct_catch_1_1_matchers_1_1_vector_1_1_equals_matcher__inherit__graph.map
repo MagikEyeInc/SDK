@@ -1,0 +1,5 @@
+<map id="Catch::Matchers::Vector::EqualsMatcher&lt; T, AllocComp, AllocMatch &gt;" name="Catch::Matchers::Vector::EqualsMatcher&lt; T, AllocComp, AllocMatch &gt;">
+<area shape="rect" id="node2" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base.html" title="Catch::Matchers::Impl\l::MatcherBase\&lt; std::vector\l\&lt; T, AllocMatch \&gt; \&gt;" alt="" coords="209,31,391,87"/>
+<area shape="rect" id="node3" href="$class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html" title="Catch::Matchers::Impl\l::MatcherUntypedBase" alt="" coords="5,5,161,47"/>
+<area shape="rect" id="node4" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method.html" title="Catch::Matchers::Impl\l::MatcherMethod\&lt; T \&gt;" alt="" coords="7,71,159,112"/>
+</map>

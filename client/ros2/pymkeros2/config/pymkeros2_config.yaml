@@ -1,0 +1,5 @@
+# Default configurations
+MKEROS_NODE:
+  ros__parameters:
+    device : "MagikEyeOne-34cff660"
+    alias : "sensor1"

@@ -1,0 +1,8 @@
+<map id="Catch::MessageBuilder" name="Catch::MessageBuilder">
+<area shape="rect" id="node2" href="$struct_catch_1_1_message_stream.html" title="Catch::MessageStream" alt="" coords="42,171,202,197"/>
+<area shape="rect" id="node3" href="$class_catch_1_1_reusable_string_stream.html" title="Catch::ReusableStringStream" alt="" coords="5,81,201,108"/>
+<area shape="rect" id="node4" href="$class_catch_1_1_non_copyable.html" title="Catch::NonCopyable" alt="" coords="31,5,175,32"/>
+<area shape="rect" id="node5" href="$struct_catch_1_1_message_info.html" title="Catch::MessageInfo" alt="" coords="232,171,372,197"/>
+<area shape="rect" id="node6" href="$struct_catch_1_1_source_line_info.html" title="Catch::SourceLineInfo" alt="" coords="226,81,378,108"/>
+<area shape="rect" id="node7" href="$class_catch_1_1_string_ref.html" title="Catch::StringRef" alt="" coords="402,81,522,108"/>
+</map>

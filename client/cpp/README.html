@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../mke.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="../../mke-banner.png" title="Magik Eye Banner" />
+</figure>
+<h1 id="c-client-for-mke-api">C++ Client for MkE API</h1>
+<p>The MkE SDK provides C++ library implementation of the client part of MkE API called <code>libmkeclient</code>:</p>
+<ul>
+<li><a href="doc/mkeclient.html">client/cpp/doc/mkeclient.html</a></li>
+<li><a href="doc/mkeclient.pdf">client/cpp/doc/mkeclient.pdf</a></li>
+</ul>
+<p>Source code documentation:</p>
+<ul>
+<li><a href="doc/html/index.html">client/cpp/doc/html</a></li>
+</ul>
+<h2 id="example-codes">Example codes</h2>
+<p>Examples for the MkE API C++ Client reside in the <a href="mkeclient/src/examples" class="uri">mkeclient/src/examples</a> directory.</p>
+<p>All examples are console applications that report progresss and results to standard output. All examples require IP address or hostname of the sensor as the first parameter.</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>demo_device_state.cpp</code></td>
+<td style="text-align: left;">Shows how to connect to sensor and get:<br> • current sensor state <br> • device info <br> • firmware info <br> Also provides an example on how to switch sensor states.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>demo_getframe_sync.cpp</code></td>
+<td style="text-align: left;">Shows how to get a point cloud data from sensor using polling method (getting data on demand). <br> It does these steps:<br> • connects to the sensor <br> • switches to <code>MKE_STATE_DEPTH_SENSOR</code> state<br> • gets a frame (via synchronous MkE C++ Client call)<br> • converts frame points to real-world coordinates<br> • prints few data samples to standard output<br> • switches back to <code>MKE_STATE_IDLE</code> state</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>demo_getframe_async.cpp</code></td>
+<td style="text-align: left;">Show the same as <code>demo_getframe_sync.cpp</code>, only it does so via asynchronous MkE C++ Client call.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>demo_pushframes.cpp</code></td>
+<td style="text-align: left;">Shows how to get point cloud data from sensor using pushing method (sensor pushes data).<br> It does these steps:<br> • connects to the sensor <br> • switches to <code>MKE_STATE_DEPTH_SENSOR</code> state<br> • starts frame pushing<br> • processes all incoming frames for a few seconds (data samples are printed to standard output)<br> • stops frame pushing<br> • switches back to <code>MKE_STATE_IDLE</code> state</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>demo_device_discovery.cpp</code></td>
+<td style="text-align: left;">Shows how to use the SSDP protocol to discover MagikEye sensors on the local network.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>test_latency.cpp</code></td>
+<td style="text-align: left;">Simple latency testing example.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-example-codes">Integration example codes</h2>
+<p>Examples on how to integrate MkE API C++ Client to 3rd party libraries (PCL, Open3D and OpenCV) are separated in <a href="mkeclient/src/integration_examples">client/cpp/mkeclient/src/integration_examples</a> directory, more information on those in:</p>
+<ul>
+<li><a href="doc/mkeclient_integration_examples.html">client/cpp/doc/mkeclient_integration_examples.html</a></li>
+<li><a href="doc/mkeclient_integration_examples.pdf">client/cpp/doc/mkeclient_integration_examples.pdf</a></li>
+</ul>
+<h2 id="c-client-tests">C++ Client tests</h2>
+<p>Tests for verification purposes of the MkE API C++ Client reside in the <a href="mkeclient/src/tester">client/cpp/mkeclient/src/tester</a> directory. More information about these tests:</p>
+<ul>
+<li><a href="doc/mkeclient_tester.html">client/cpp/doc/mkeclient_tester.html</a></li>
+<li><a href="doc/mkeclient_tester.pdf">client/cpp/doc/mkeclient_tester.pdf</a></li>
+</ul>
+<hr />
+<p>© 2016-2021 MagikEye Inc.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="logos">logos.png</file>
+        <file alias="logos_inv">logos_inv.png</file>
+        <file alias="mkelogo_svg">mkelogo.svg</file>
+        <file alias="mkelogo">mkelogo.png</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file alias="about">about.html</file>
+    </qresource>
+</RCC>

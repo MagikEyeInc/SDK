@@ -1,0 +1,4 @@
+<map id="mke::cli::SerialBus" name="mke::cli::SerialBus">
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_serial_client.html" title="SerialClient &#45; a client with serial port bus. " alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="12,5,141,32"/>
+</map>

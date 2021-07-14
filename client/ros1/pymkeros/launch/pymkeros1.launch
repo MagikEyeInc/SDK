@@ -1,0 +1,5 @@
+<launch>
+  <rosparam command="load" file="$(find pymkeros)/config/pymkeros1_config.yaml" />
+  <arg name="pymke_args" default="--help"/>
+  <node name="pymkeros1" pkg="pymkeros" type="pymkeros1_node.py" output="screen" args="$(arg pymke_args)"/>
+</launch>

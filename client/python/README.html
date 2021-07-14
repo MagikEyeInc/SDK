@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../mke.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="../../mke-banner.png" title="Magik Eye Banner" />
+</figure>
+<h1 id="python-client-for-mke-api">Python Client for MkE API</h1>
+<p>The MkE SDK contains <code>pymkeapi</code>, a Python (version 3.x) package that implements an MkE API client. It also contains several examples of the MkE API client code implementation and communication.</p>
+<p>The package is distributed in the form of a <a href="pymkeapi-1.2.4-py3-none-any.whl">Python wheel</a> which can be easily installed--along with its dependencies--using the <code>pip3</code> tool:</p>
+<pre><code>$ pip3 install pymkeapi-1.2.4-py3-none-any.whl</code></pre>
+<p>The <code>pymkeapi</code> package contains the <code>SyncClient</code> class, which is a thin wrapper over the MkE API with an almost 1:1 correspondence between the API requests and the <code>SyncClient</code> methods. See the following HTML or PDF files for the documentation of the <code>pymkeapi.SyncClient</code> class:</p>
+<ul>
+<li><a href="doc/pysyncclient.html">client/python/doc/pysyncclient.html</a></li>
+<li><a href="doc/pysyncclient.pdf">client/python/doc/pysyncclient.pdf</a></li>
+</ul>
+<h2 id="example-codes">Example codes</h2>
+<p>The MkE API client examples in Python reside in the <a href="mkeapi_examples">client/python/mkeapi_examples</a> directory. All of the examples require IP address or hostname of the sensor as the first parameter and optionally the port number as the second parameter. The default port number is 8888:</p>
+<p><code>python3 example_script.py &lt;IP address or hostname&gt; [&lt;port number&gt;]</code></p>
+<h3 id="examples-of-the-direct-mke-api-communication">Examples of the direct MkE API communication</h3>
+<p>These examples demostrate the direct MkE API communication with the sensor. These provide the best way to understand the client/sensor communication protocol.</p>
+<blockquote>
+<p><strong>Note:</strong> All request and related reply datagrams are immediately printed in the RAW format.</p>
+</blockquote>
+<table style="width:86%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>raw_getstate.py</code></td>
+<td style="text-align: left;">• Checks the current sensor state <br> • Switches to <code>MKE_STATE_DEPTH_SENSOR</code> <br> • Waits for a while <br> • Switches back to <code>MKE_STATE_IDLE</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>raw_setstate.py</code></td>
+<td style="text-align: left;">• Checks the current sensor state. <br> • Switches to <code>MKE_STATE_DEPTH_SENSOR</code> <br> • Waits for a while <br> • Switches back to <code>MKE_STATE_IDLE</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>raw_getframe.py</code></td>
+<td style="text-align: left;">• Checks the current sensor state <br> • Switches to <code>MKE_STATE_DEPTH_SENSOR</code> <br> • Captures one frame from the sensor <br> • Switches back to <code>MKE_STATE_IDLE</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>sensor_discovery.py</code></td>
+<td style="text-align: left;">Shows how to use the SSDP protocol to discover MagikEye sensors on the local network.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-usage-of-the-syncclient-client">Example usage of the <code>SyncClient</code> client</h3>
+<p>These examples use Python MkE API implementation <code>SyncClient</code>.</p>
+<table style="width:86%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>client_getframe.py</code></td>
+<td style="text-align: left;">• Checks the current sensor state <br> • Switches to <code>MKE_STATE_DEPTH_SENSOR</code> <br> • Captures one frame from the sensor<br> • Switches back to <code>MKE_STATE_IDLE</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>client_pushframes.py</code></td>
+<td style="text-align: left;">• Checks the current sensor state <br> • Switches to <code>MKE_STATE_DEPTH_SENSOR</code> <br> • Captures one frame from the sensor <br> • Switches back to <code>MKE_STATE_IDLE</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>simple_viewer.py</code></td>
+<td style="text-align: left;">A simple PySide2/vispy based point cloud viewer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-examples-of-the-syncclient-client">Integration examples of the <code>SyncClient</code> client</h3>
+<p>These examples show how to use <code>SyncClient</code> with common 3rd party libraries:</p>
+<ul>
+<li><a href="http://pointclouds.org">PCL</a></li>
+<li><a href="http://open3d.org">Open3D</a></li>
+</ul>
+<p>Information about required dependencies to run these examples may be found in:</p>
+<ul>
+<li><a href="../cpp/doc/mkeclient_integration_examples.html">client/cpp/doc/mkeclient_integration_examples.html</a></li>
+<li><a href="../cpp/doc/mkeclient_integration_examples.pdf">client/cpp/doc/mkeclient_integration_examples.pdf</a></li>
+</ul>
+<table style="width:86%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>pcl_getframe.py</code></td>
+<td style="text-align: left;">Shows how to use <code>pymkeapi</code> in connection with the <a href="http://pointclouds.org">PCL</a> library.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>pcl_viewer.py</code></td>
+<td style="text-align: left;">A Simple point cloud viewer based on the <a href="http://pointclouds.org">PCL</a> library.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>open3d_getframe.py</code></td>
+<td style="text-align: left;">Shows how to use <code>pymkeapi</code> in connection with the <a href="http://open3d.org">Open3D</a> library.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>open3d_viewer.py</code></td>
+<td style="text-align: left;">A simple point cloud viewer based on the <a href="http://open3d.org">Open3D</a> library.</td>
+</tr>
+</tbody>
+</table>
+<p>© 2016-2021 MagikEye Inc.</p>
+</body>
+</html>
