@@ -100,9 +100,10 @@ class MkEPointCloudPublisher : public rclcpp::Node
             for (int i = 0; i < (int)num_items; i++)
               {
                 // Create Iters to add Data
-                *iter_x = convert<float>(items->x, data3d_type);
-                *iter_y = convert<float>(items->y, data3d_type);
-                *iter_z = convert<float>(items->z, data3d_type);
+                // Multiplying 0.001 to convert Frame(mm) to ROS2(m)
+                *iter_x = 0.001 * convert<float>(items->x, data3d_type);
+                *iter_y = 0.001 * convert<float>(items->y, data3d_type);
+                *iter_z = 0.001 * convert<float>(items->z, data3d_type);
                 *iter_uid = convert<float>(items->uid, data3d_type);
 
                 ++iter_x;
@@ -114,7 +115,7 @@ class MkEPointCloudPublisher : public rclcpp::Node
               }
 
             // Initialize other parameters
-            cloud.header.frame_id = "Map";
+            cloud.header.frame_id = "map";
             cloud.header.stamp = this->now();
             cloud.height = 1;
             cloud.width = num_items;

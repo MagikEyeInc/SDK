@@ -34,6 +34,14 @@ void switch_to_depth_sensor_state(Client& client)
 
 // ============================================================================
 
+void scale_openCV(uint32_t data3d_type, Mat& mat) {
+  // Scaling factor to real world units (meters):
+  double k = 0.001 / std::pow(2, data3d_type);
+  mat = mat * k;
+}
+
+// ============================================================================
+
 void get_single_frame_openCV(Client& client, Mat& mat)
 {
   static Buffer buff;
@@ -46,9 +54,7 @@ void get_single_frame_openCV(Client& client, Mat& mat)
   std::cout << "Have an OpenCV Mat with " << mat.total() << " points"
             << std::endl;
 
-  // Scaling factor to real world units (meters):
-  double k = 0.001 / std::pow(2, reply.data3d_type);
-  mat = mat * k;
+  scale_openCV(reply.data3d_type, mat);
 }
 
 // ============================================================================
@@ -56,7 +62,7 @@ void get_single_frame_openCV(Client& client, Mat& mat)
 void render_frame_openCV(viz::Viz3d& myWindow, Mat& cloud)
 {
   viz::WCloud cloud_widget(cloud, viz::Color::green());
-  cloud_widget.setRenderingProperty(viz::POINT_SIZE, 3.0);
+  cloud_widget.setRenderingProperty(viz::POINT_SIZE, 4.0);
   Affine3f cloud_pose = Affine3f().translate(Vec3f(0.0f, 0.0f, 0.0f));
   myWindow.showWidget("cloud", cloud_widget, cloud_pose);
   myWindow.spinOnce();
@@ -84,7 +90,7 @@ void run_demo(const char* host, const char* port = "8888")
 #if (ENABLE_VISU)
       viz::Viz3d myWindow("OpenCV demo - press 'q' on keyboard to exit");
 
-      Vec3f cam_pos(-0.5f, +1.0f, -1.0f), cam_focal_point(0.0f, 0.0f, 1.0f),
+      Vec3f cam_pos(0.0f, 0.0f, -1.0f), cam_focal_point(0.0f, 0.0f, 1.0f),
         cam_y_dir(1.0f, 0.0f, 0.0f);
       Affine3f cam_pose =
         viz::makeCameraPose(cam_pos, cam_focal_point, cam_y_dir);
@@ -120,8 +126,7 @@ void run_demo(const char* host, const char* port = "8888")
 
           cloud_mutex.lock();
           frm.getOpenCV<mke::api::MkEFrameItem1>(cloud);
-          cloud =
-            cloud * 0.001 / std::pow(2, reply.data3d_type); // scale to meters
+          scale_openCV(reply.data3d_type, cloud);
           cloud_mutex.unlock();
 
 #if (ENABLE_VISU)

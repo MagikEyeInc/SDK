@@ -345,7 +345,7 @@ def about_application(self):
         "                      ")
     msg.setInformativeText(
         "Utility for visualizing MagikEye sensor's point cloud data "
-        "Copyright © MagikEye Inc. 2020-2021 under BSD-3-Clause licence "
+        "Copyright © MagikEye Inc. 2020-2021 under BSD-3-Clause licence.\n\n"
         "Using Pyside2 library licensed under GNU LGPL v2.1 \n")
 
     msg.setWindowTitle("About MKE Point Cloud Viewer")

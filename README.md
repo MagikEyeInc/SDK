@@ -1,8 +1,8 @@
 ![](mke-banner.png "Magik Eye Banner")
 
-# MkE SDK v1.1.1
+# MkE SDK v1.1.2
 
-This is MkE SDK v1.1.1
+This is MkE SDK v1.1.2
 
 For the description of MkE API see:
 
@@ -10,28 +10,28 @@ For the description of MkE API see:
 * [mkeapi/doc/mkeapi.pdf](mkeapi/doc/mkeapi.pdf)
 
 For a C++ implementation of an MkE API client see:
-
-* [client/cpp/README.html](client/cpp/README.html)
+ 
+* [client/cpp/README.html](client/cpp/README.html) ([README.md](client/cpp/README.md))
 
 For a Python implementation of an MkE API client see:
 
-* [client/python/README.html](client/python/README.html)
+* [client/python/README.html](client/python/README.html) ([README.md](client/python/README.md))
 
 For a multi-platform GUI utility for local network sensor discovery see:
 
-* [mkediscovery/README.html](mkediscovery/README.html)
+* [mkediscovery/README.html](mkediscovery/README.html) ([README.md](mkediscovery/README.md))
 
 For a simple Python point cloud viewer implementation see:
 
-* [pymkeviewer/README.html](pymkeviewer/README.html)
+* [pymkeviewer/README.html](pymkeviewer/README.html) ([README.md](pymkeviewer/README.md))
 
 For C++ and Python implementations of a ROS1 point cloud publisher node:
 
-* [client/ros1/README.html](client/ros1/README.html)
+* [client/ros1/README.html](client/ros1/README.html) ([README.md](client/ros1/README.md))
 
 For C++ and Python implementations of a ROS2 point cloud publisher node:
 
-* [client/ros2/README.html](client/ros2/README.html)
+* [client/ros2/README.html](client/ros2/README.html) ([README.md](client/ros2/README.md))
 
 ## Licence
 

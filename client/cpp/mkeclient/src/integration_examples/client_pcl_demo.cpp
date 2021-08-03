@@ -35,6 +35,19 @@ void switch_to_depth_sensor_state(Client& client)
 
 // ============================================================================
 
+void scale_pcl(uint32_t data3d_type, 
+               pcl::PointCloud<pcl::PointXYZ>::Ptr& pcl_data) {
+  // Scaling factor to real world units (meters):
+  double k = 0.001 / std::pow(2, data3d_type);
+  for (size_t i = 0; i < pcl_data->points.size(); i++) {
+    pcl_data->points[i].x*=k; 
+    pcl_data->points[i].y*=k; 
+    pcl_data->points[i].z*=k; 
+  }
+}
+
+// ============================================================================
+
 void get_single_frame_pcl(Client& client,
                           pcl::PointCloud<pcl::PointXYZ>::Ptr& pcl_data)
 {
@@ -48,8 +61,7 @@ void get_single_frame_pcl(Client& client,
   std::cout << "Have a PCL PointCloud with " << pcl_data->points.size()
             << " points" << std::endl;
 
-  // This can be used to scale points to real world units (meters):
-  // double k = 0.001 / std::pow(2, reply.data3d_type);
+  scale_pcl(reply.data3d_type, pcl_data);
 }
 
 // ============================================================================
@@ -62,9 +74,9 @@ void render_frame_pcl(std::shared_ptr<pcl::visualization::PCLVisualizer>& vis,
 
   if (!vis->updatePointCloud(pcl_data))
     {
-      vis->addPointCloud(pcl_data);
+      vis->addPointCloud(pcl_data, "cloud");
       vis->setPointCloudRenderingProperties(
-        pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2.5);
+        pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 4, "cloud");
     }
   vis->spinOnce();
 }
@@ -99,6 +111,9 @@ void run_demo(const char* host, const char* port = "8888")
                                               "keyboard "
                                               "to exit"));
       render_frame_pcl(vis, pcl_data);
+      vis->setCameraPosition(0, 0, -1,    0, 0, 1,   -1, 0, 0);
+      vis->setCameraFieldOfView(0.5);
+      vis->addCoordinateSystem(0.1);
 #endif
 
       pcl_data->clear();
@@ -119,9 +134,7 @@ void run_demo(const char* host, const char* port = "8888")
                     << std::endl;
 
           frm.getPCL<mke::api::MkEFrameItem1>(pcl_data);
-
-        // This can be used to scale points to real world units (meters):
-        // double k = 0.001 / std::pow(2, reply.data3d_type);
+          scale_pcl(params.data3d_type, pcl_data);
 
 #if (ENABLE_VISU)
           render_frame_pcl(vis, pcl_data);

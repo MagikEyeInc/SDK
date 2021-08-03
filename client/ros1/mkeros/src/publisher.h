@@ -101,9 +101,10 @@ class MkEPointCloudPublisher
             for (int i = 0; i < num_items; i++)
               {
                 // Create Iters to add Data
-                *iter_x = convert<float>(items->x, data3d_type);
-                *iter_y = convert<float>(items->y, data3d_type);
-                *iter_z = convert<float>(items->z, data3d_type);
+                // Multiplying 0.001 to convert Frame(in mm) to ROS(m)
+                *iter_x = 0.001 * convert<float>(items->x, data3d_type);
+                *iter_y = 0.001 * convert<float>(items->y, data3d_type);
+                *iter_z = 0.001 * convert<float>(items->z, data3d_type);
                 *iter_uid = convert<float>(items->uid, data3d_type);
 
                 ++iter_x;
@@ -115,7 +116,7 @@ class MkEPointCloudPublisher
               }
 
             // Initialize other parameters
-            cloud.header.frame_id = "Map";
+            cloud.header.frame_id = "map";
             cloud.header.stamp = ros::Time::now();
             cloud.header.seq = 1;
             cloud.height = 1;

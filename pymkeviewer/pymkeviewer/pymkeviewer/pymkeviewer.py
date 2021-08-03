@@ -69,7 +69,7 @@ class SimpleViewer(QtWidgets.QMainWindow):
             lambda: self.handle_connection(self._ui.pushButtonConnect.text()))
         self._ui.actionExit.triggered.connect(self.close_application)
 
-        self._thread = Worker(self._ui, self._ui.widget)
+        self._thread = Worker(self._ui.widget)
         self._ui.horizontalSlider.valueChanged.connect(
             self._thread.update_point)
         self._ui.comboBox.activated.connect(self._thread.update_color)
@@ -78,6 +78,7 @@ class SimpleViewer(QtWidgets.QMainWindow):
         self._thread.dfps_text.connect(self._ui.missed_frames.setText)
         self._thread.render_btn_text.connect(self._ui.pushButtonStart.setText)
         self._thread.disconnect_sig.connect(self.remote_connection)
+        self._thread.opengl_loaded_sig.connect(self._ui.openglLoaded)
 
         self._remote_disconnection = False
         self.__disconnect = False
@@ -604,10 +605,11 @@ class Worker(QtCore.QThread):
     sensor_fps_text = QtCore.Signal(str)
     render_btn_text = QtCore.Signal(str)
     disconnect_sig = QtCore.Signal(str)
+    opengl_loaded_sig = QtCore.Signal()
 
     # =========================================================================
 
-    def __init__(self, ui, widget, parent=None):
+    def __init__(self, widget, parent=None):
         super().__init__(parent)
         if verbose:
             print("INIT")
@@ -619,7 +621,6 @@ class Worker(QtCore.QThread):
             'cubehelix', 'single_hue', 'hsl', 'husl', 'diverging']
         self._col = color.get_colormap('autumn')
 
-        self._ui = ui
         self._widget = widget
 
         self._stream = None
@@ -756,7 +757,8 @@ class Worker(QtCore.QThread):
             
             self.check_axis(self.__axis_visibility)
 
-            self._ui.openglLoaded()
+            self.opengl_loaded_sig.emit()
+
         except Exception as msg:
             print(
                 f"Exception occurred in __create_full_axis_once() due to :: {str(msg)}")

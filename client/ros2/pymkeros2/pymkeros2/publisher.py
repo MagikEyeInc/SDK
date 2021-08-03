@@ -48,6 +48,7 @@ class MkEPointCloudPublisher(Node):
                 num = frame.pts3d.shape[0]
                 pt_size = {1: 8, 2: 12}.get(ftype)
                 dim = {1: 4, 2: 6}.get(ftype)
+                frame.pts3d = 0.001 * frame.pts3d # frame.pts3d(mm) to ROS(m)
                 data = np.concatenate((frame.pts3d,
                                        frame.uids.reshape(frame.uids.shape[0], 1)), axis=1)
                 msg = PointCloud2()

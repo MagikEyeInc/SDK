@@ -43,6 +43,36 @@ void switch_to_depth_sensor_state(Client& client)
 
 // ============================================================================
 
+void scale_open3D(uint32_t data3d_type, 
+    std::shared_ptr<open3d::geometry::PointCloud>& o3d_ptr) 
+{
+  // Scaling factor to real world units (meters):
+  double k = 0.001 / std::pow(2, data3d_type);
+  o3d_ptr->Scale(k, Eigen::Vector3d(0,0,0));  
+}
+
+// ============================================================================
+
+void init_camera_open3D(visualization::VisualizerWithKeyCallback& viz) 
+{
+  // Prepare matrix to view from the sensor:
+  Eigen::Vector3d position(0,0,-1);
+  double z_rotation = 0.5*3.14159265359;  
+  open3d::visualization::ViewControl &view_ctl = viz.GetViewControl();   
+  Eigen::Transform<double, 3, Eigen::Affine> t;
+  t = Eigen::Translation<double, 3>(position); 
+  t.rotate(Eigen::AngleAxis<double>(z_rotation, Eigen::Vector3d::UnitZ()));
+  Eigen::Matrix4d matrix = t.matrix();
+  // Update camera:
+  camera::PinholeCameraParameters pinholeCam;
+  view_ctl.ConvertToPinholeCameraParameters(pinholeCam);
+  pinholeCam.extrinsic_ = matrix;
+  view_ctl.ConvertFromPinholeCameraParameters(pinholeCam);
+  view_ctl.SetZoom(0.35);
+}
+
+// ============================================================================
+
 void get_single_frame_open3D(
   Client& client,
   std::shared_ptr<open3d::geometry::PointCloud>& o3d_ptr)
@@ -58,9 +88,7 @@ void get_single_frame_open3D(
   std::cout << "Have a Open3D PointCloud with " << o3d_ptr->points_.size()
             << " points" << std::endl;
 
-  // This can be used to scale points to real world units (meters):
-  // double k = 0.001 / std::pow(2, reply.data3d_type);
-  // o3d_ptr->Scale(k, Eigen::Vector3d(0,0,0));
+  scale_open3D(reply.data3d_type, o3d_ptr);
 }
 
 // ============================================================================
@@ -102,11 +130,11 @@ void run_demo(const char* host, const char* port = "8888")
 #if (ENABLE_VISU)
       visualization::VisualizerWithKeyCallback viz;
       viz.CreateVisualizerWindow("Open3D demo - press 'q' on keyboard to exit",
-                                 1920, 540);
+                                 1920, 1024);
       int key = 81; // 'q'
       viz.RegisterKeyCallback(key, devs_callback);
-      auto bounding_box = o3d_ptr->GetAxisAlignedBoundingBox();
       viz.AddGeometry(o3d_ptr);
+      init_camera_open3D(viz);
       render_frame_open3D(viz, o3d_ptr);
 #endif
 
@@ -128,9 +156,7 @@ void run_demo(const char* host, const char* port = "8888")
                     << std::endl;
 
           frm.getOpen3D<mke::api::MkEFrameItem1>(o3d_ptr);
-
-        // This can be used to scale points to real world units (meters):
-        // double k = 0.001 / std::pow(2, reply.data3d_type);
+          scale_open3D(params.data3d_type, o3d_ptr);
 
 #if (ENABLE_VISU)
           render_frame_open3D(viz, o3d_ptr);
