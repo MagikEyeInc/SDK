@@ -33,11 +33,11 @@ endif()
 # CXX Flags
 
 if(MSVC)
-    set(CMAKE_CXX_FLAGS_RELEASE 
-      "${CMAKE_CXX_FLAGS_RELEASE} /O2 /fp:fast /MT /DNDEBUG")
+    #set(CMAKE_CXX_FLAGS_RELEASE 
+    #  "${CMAKE_CXX_FLAGS_RELEASE} /O2 /fp:fast /MT /DNDEBUG")
 
-    set(CMAKE_CXX_FLAGS_DEBUG
-      "${CMAKE_CXX_FLAGS_DEBUG} /MT")
+    #set(CMAKE_CXX_FLAGS_DEBUG
+    #  "${CMAKE_CXX_FLAGS_DEBUG} /MT")
       
 else()
     set(CMAKE_CXX_FLAGS

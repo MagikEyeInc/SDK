@@ -30,6 +30,8 @@
 
 /* -------------------------------------------------------------------------- */
 
+using namespace mke;
+using namespace mke::cli;
 using namespace mke::cli::priv;
 using boost::asio::ip::tcp;
 
