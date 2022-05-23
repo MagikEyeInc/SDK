@@ -1,6 +1,7 @@
 <map id="mke::cli::BaseBus" name="mke::cli::BaseBus">
-<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_serial_bus.html" title="SerialBus class handles connection to a device via serial port. " alt="" coords="13,80,145,107"/>
-<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_tcp_bus.html" title="TcpBus class handles connection to a device via TCP/IP protocol. " alt="" coords="175,80,296,107"/>
-<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_serial_client.html" title="SerialClient &#45; a client with serial port bus. " alt="" coords="5,155,148,181"/>
-<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_tcp_client.html" title="TcpClient &#45; a client with TCP/IP bus. " alt="" coords="172,155,304,181"/>
+<area shape="rect" id="node1" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="100,5,237,32"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_serial_bus.html" title="SerialBus class handles connection to a device via serial port." alt="" coords="15,80,157,107"/>
+<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_tcp_bus.html" title="TcpBus class handles connection to a device via TCP/IP protocol." alt="" coords="188,80,315,107"/>
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_serial_client.html" title="SerialClient &#45; a client with serial port bus." alt="" coords="5,155,161,181"/>
+<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_tcp_client.html" title="TcpClient &#45; a client with TCP/IP bus." alt="" coords="185,155,325,181"/>
 </map>

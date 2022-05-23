@@ -73,6 +73,7 @@ class SimpleViewer(QtWidgets.QMainWindow):
         self._ui.horizontalSlider.valueChanged.connect(
             self._thread.update_point)
         self._ui.comboBox.activated.connect(self._thread.update_color)
+        self._ui.comboBox_1.currentTextChanged.connect(self.handle_policy)
         self._thread.fps_text.connect(self._ui.fps.setText)
         self._thread.sensor_fps_text.connect(self._ui.sensor_fps.setText)
         self._thread.dfps_text.connect(self._ui.missed_frames.setText)
@@ -107,6 +108,7 @@ class SimpleViewer(QtWidgets.QMainWindow):
         self._ui.horizontalSlider.setDisabled(True)
         self._ui.spinBox.setDisabled(True)
         self._ui.comboBox.setDisabled(True)
+        self._ui.comboBox_1.setDisabled(True)
 
         self.save_point_size = self.settings.value("point_size", 
                                         self._ui.horizontalSlider.value(),  type=int)
@@ -115,7 +117,7 @@ class SimpleViewer(QtWidgets.QMainWindow):
         self.save_check_axis = self.settings.value("check_axis",
                                         self._ui.checkBoxAxis.isChecked(),  type=bool)
         self.read_config()
-    
+
     # =========================================================================
 
     def read_config(self):
@@ -165,8 +167,12 @@ class SimpleViewer(QtWidgets.QMainWindow):
         try:
             if state == 'Start Rendering':
                 self.start_viewer_sig.emit()
+                self._ui.comboBox_1.setDisabled(True)
+                self._ui.comboBox_1.setStyleSheet(self.enable_color)
             elif state == 'Stop Rendering':
                 self.stop_viewer_sig.emit()
+                self._ui.comboBox_1.setDisabled(False)
+                self._ui.comboBox_1.setStyleSheet(self.disable_color)
 
         except Exception as msg:
             print(
@@ -197,6 +203,8 @@ class SimpleViewer(QtWidgets.QMainWindow):
                 (0, 0, self._ui.dockWidget_2.width()-20, 170))
             self._ui.comboBox.setGeometry(QRect
                 (120, 460, self._ui.dockWidget_2.width()-150, 25))
+            self._ui.comboBox_1.setGeometry(QRect
+                (120, 560, self._ui.dockWidget_2.width()-150, 25))
 
             if self._ui.dockWidget_2.isVisible() and not self._ui.dockWidget_2.isFloating():
                 self.windowWidth = self.width() - self._ui.dockWidget_2.width()
@@ -413,29 +421,32 @@ class SimpleViewer(QtWidgets.QMainWindow):
         :return: None
         """
         try:
-            enable_color = u"color: rgb(255, 255, 255);\nbackground-color: rgb(46, 52, 54);"
-            disable_color = u"color: rgb(0, 0, 0);\nbackground-color: rgb(186, 189, 182);"
             if action == "Connect":
                 self.connect_to_device()
                 if self._ui.pushButtonConnect.text() == "Disconnect":
                     self._ui.pushButtonStart.setDisabled(False)
-                    self._ui.pushButtonStart.setStyleSheet(disable_color)
+                    self._ui.pushButtonStart.setStyleSheet(self.disable_color)
                     self._ui.horizontalSlider.setDisabled(False)
                     self._ui.spinBox.setDisabled(False)
                     self._ui.comboBox.setDisabled(False)
-                    self._ui.comboBox.setStyleSheet(disable_color)
+                    self._ui.comboBox.setStyleSheet(self.disable_color)
                     self._ui.checkBoxAxis.setDisabled(False)
+                    self._ui.comboBox_1.setDisabled(False)
+                    self._ui.comboBox_1.setStyleSheet(self.disable_color)
 
             elif action == "Disconnect":
                 self.disconnect_the_device()
                 if self._ui.pushButtonConnect.text() == 'Connect':
                     self._ui.pushButtonStart.setDisabled(True)
-                    self._ui.pushButtonStart.setStyleSheet(enable_color)
+                    self._ui.pushButtonStart.setStyleSheet(self.enable_color)
                     self._ui.horizontalSlider.setDisabled(True)
                     self._ui.spinBox.setDisabled(True)
                     self._ui.comboBox.setDisabled(True)
+                    self._ui.comboBox.setStyleSheet(self.enable_color)
                     self._ui.checkBoxAxis.setDisabled(True)
-                    self._ui.comboBox.setStyleSheet(enable_color)
+                    self._ui.comboBox_1.setDisabled(True)
+                    self._ui.comboBox_1.setStyleSheet(self.enable_color)
+
 
         except Exception as msg:
             print(
@@ -475,10 +486,22 @@ class SimpleViewer(QtWidgets.QMainWindow):
             try:
                 connection_status = self._thread.connect_sensor(
                     self._selected_ip)
+                
+                # List all available policies
+                current_policy = self._thread.get_policy()
+                self.list_policies = self._thread.list_policy()
+                for index, policies in enumerate(self.list_policies):
+                    if index == 0:
+                        self._ui.comboBox_1.setItemText(index, policies)
+                    else:
+                        self._ui.comboBox_1.addItem(policies)
+                self._ui.comboBox_1.setCurrentText(current_policy)
                 if verbose:
                     print("IPs and Device IDs :", self._ips, self._device_ids)
                     print(f"Connecting to the ip = {self._selected_ip} ...")
                     print("CONNECTION RESULT: ", connection_status)
+                    print("Current Policy : ", current_policy)
+                    print("Available Policies :",self.list_policies)
                 if connection_status:
                     self.setWindowTitle(
                         "Connected to MKE Sensor " + str(self._selected_device_id) 
@@ -528,6 +551,8 @@ class SimpleViewer(QtWidgets.QMainWindow):
                 self._msg.move(self._ui.widget.rect().center())
                 if self._ui.pushButtonStart.text() == "Start Rendering":
                     self.setWindowTitle("PyMkEViewer")
+                    self._ui.comboBox_1.clear()
+                    self._ui.comboBox_1.addItem("None")
                     self._thread.disconnect_sensor()
                     self.__connection_established = False
                     self._selected_ip = None
@@ -561,6 +586,20 @@ class SimpleViewer(QtWidgets.QMainWindow):
             self._msg.setIcon(QMessageBox.Warning)
             self._msg.setText(info_msg)
             self._msg.exec_()
+
+    # =========================================================================
+
+    def handle_policy(self,value):
+        """
+        :Description: Function to handle set policy
+        :Params: None
+        :return: None
+        """
+        try:
+            if value in self.list_policies:
+                self._thread.set_policy(value)
+        except Exception as msg:
+            print(f"Exception occured in handle_policy() due to :: {str(msg)}")
 
 # =============================================================================
 
@@ -825,6 +864,48 @@ class Worker(QtCore.QThread):
             print(
                 f"Exception occurred in disconnect_sensor() due to :: {str(msg)}")
 
+    # =========================================================================
+
+    def list_policy(self):
+        """
+        :Description: Function to return the avaliable list of Policies
+        :Params: None
+        :return: list
+        """
+        try:
+            return self.__client.list_policies()
+        except Exception as msg:
+             print(
+                f"Exception occurred in list_policy() due to :: {str(msg)}")
+    
+    # =========================================================================
+
+    def get_policy(self):
+        """
+        :Description: Function to return the current policy
+        :Params: None
+        :return: str
+        """       
+        try:
+            return self.__client.get_policy()
+        except Exception as msg:
+            print(
+                f"Exception occurred in get_policy() due to :: {str(msg)}")
+
+    # =========================================================================
+
+    def set_policy(self, value):
+        """
+        :Description: Function to set the Policy
+        :Params:  value [str] : Policy
+        :return: None
+        """
+        try:
+            self.__client.set_policy(value)
+        except Exception as msg:
+            print(
+                f"Exception occurred in set_policy() due to :: {str(msg)}")
+    
     # =========================================================================
 
     def run(self):

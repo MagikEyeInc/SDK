@@ -266,7 +266,7 @@ def main():
             cli = CliParser.parse_args(sys.argv[1:])
 
         if cli.version:
-            print(MKEROS1_VERSION)
+            print(PYMKEROS1_VERSION)
 
         device_discovery.setTimeout(cli.timeout)
 

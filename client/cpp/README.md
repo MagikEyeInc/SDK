@@ -4,8 +4,8 @@
 
 The MkE SDK provides C++ library implementation of the client part
 of MkE API called `libmkeclient`:
-
-* [client/cpp/doc/mkeclient.html](doc/mkeclient.html)
+ 
+* [client/cpp/doc/mkeclient.html](doc/mkeclient.html) ([README.md](doc/README.md))
 * [client/cpp/doc/mkeclient.pdf](doc/mkeclient.pdf)
 
 Source code documentation:
@@ -68,17 +68,17 @@ Examples on how to integrate MkE API C++ Client to 3rd party libraries (PCL, Ope
 in [client/cpp/mkeclient/src/integration_examples](mkeclient/src/integration_examples) directory, 
 more information on those in:
 
-* [client/cpp/doc/mkeclient_integration_examples.html](doc/mkeclient_integration_examples.html)
-* [client/cpp/doc/mkeclient_integration_examples.pdf](doc/mkeclient_integration_examples.pdf)
+* [client/cpp/doc/mkeclient_integration_examples.html](doc/mkeclient_integration_examples.html) ([mkeclient_integration_examples.md](doc/mkeclient_integration_examples.md))
+* [client/cpp/doc/mkeclient_integration_examples.pdf](doc/mkeclient_integration_examples.pdf) 
 
 ## C++ Client tests
 
 Tests for verification purposes of the MkE API C++ Client reside in the [client/cpp/mkeclient/src/tester](mkeclient/src/tester) directory. 
 More information about these tests:
 
-* [client/cpp/doc/mkeclient_tester.html](doc/mkeclient_tester.html) 
-* [client/cpp/doc/mkeclient_tester.pdf](doc/mkeclient_tester.pdf)
+* [client/cpp/doc/mkeclient_tester.html](doc/mkeclient_tester.html) ([mkeclient_tester.md](doc/mkeclient_tester.md))
+* [client/cpp/doc/mkeclient_tester.pdf](doc/mkeclient_tester.pdf) 
 
 ---
 
- © 2016-2021 MagikEye Inc.
+ © 2016-2022 MagikEye Inc.

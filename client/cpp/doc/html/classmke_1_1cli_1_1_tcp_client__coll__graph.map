@@ -1,7 +1,9 @@
 <map id="mke::cli::TcpClient" name="mke::cli::TcpClient">
-<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_tcp_bus.html" title="TcpBus class handles connection to a device via TCP/IP protocol. " alt="" coords="16,251,137,277"/>
-<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="5,103,135,130"/>
-<area shape="rect" id="node5" href="$classmke_1_1cli_1_1priv_1_1_raw_client.html" title="RawClient wraps communication protocol with the MagikEye sensor independently to a bus type..." alt="" coords="108,200,275,227"/>
-<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_client.html" title="Client class provides simple interface for interaction with Device via MkE API. After successful conn..." alt="" coords="131,301,243,328"/>
-<area shape="rect" id="node6" href="$classmke_1_1memory_1_1_mem_pool.html" title="mke::memory::MemPool\l\&lt; mke::api::MkERequest \&gt;" alt="" coords="159,96,339,137"/>
+<area shape="rect" id="node1" title="TcpClient &#45; a client with TCP/IP bus." alt="" coords="40,377,180,404"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_tcp_bus.html" title="TcpBus class handles connection to a device via TCP/IP protocol." alt="" coords="17,251,144,277"/>
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="5,103,143,130"/>
+<area shape="rect" id="node5" href="$classmke_1_1cli_1_1priv_1_1_raw_client.html" title="RawClient wraps communication protocol with the MagikEye sensor independently to a bus type." alt="" coords="111,200,290,227"/>
+<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_client.html" title="Client class provides simple interface for interaction with Device via MkE API. After successful conn..." alt="" coords="136,301,257,328"/>
+<area shape="rect" id="node6" href="$classmke_1_1memory_1_1_mem_pool.html" title=" " alt="" coords="167,96,365,137"/>
+<area shape="rect" id="node7" title=" " alt="" coords="185,5,347,47"/>
 </map>

@@ -4,8 +4,14 @@ project(mkecli_examples)
 # Only the most crucial flags here (see libmkeclient's cmake for optimal flags)
 if(CMAKE_COMPILER_IS_GNUCXX)
   add_compile_options("-std=c++11")
-elseif(MSVC)
-  add_compile_options("/MT")
+endif()
+
+if(MSVC)
+    set(CMAKE_CXX_FLAGS_RELEASE 
+      "${CMAKE_CXX_FLAGS_RELEASE} /O2 /fp:fast /MT /DNDEBUG")
+
+    set(CMAKE_CXX_FLAGS_DEBUG
+      "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 endif()
 
 # This block is not needed if the libmkecli has been installed via `make install`

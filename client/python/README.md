@@ -11,7 +11,7 @@ $ pip3 install pymkeapi-1.2.4-py3-none-any.whl
 
 The `pymkeapi` package contains the `SyncClient` class, which is a thin wrapper over the MkE API with an almost 1:1 correspondence between the API requests and the `SyncClient` methods. See the following HTML or PDF files for the documentation of the `pymkeapi.SyncClient` class:
 
-* [client/python/doc/pysyncclient.html](doc/pysyncclient.html)
+* [client/python/doc/pysyncclient.html](doc/pysyncclient.html) ([README.md](doc/README.md))
 * [client/python/doc/pysyncclient.pdf](doc/pysyncclient.pdf)
 
 ## Example codes
@@ -83,7 +83,7 @@ These examples show how to use `SyncClient` with common
 Information about required dependencies to run these examples
 may be found in:
 
-* [client/cpp/doc/mkeclient_integration_examples.html](../cpp/doc/mkeclient_integration_examples.html)
+* [client/cpp/doc/mkeclient_integration_examples.html](../cpp/doc/mkeclient_integration_examples.html) ([mkeclient_integration_examples.md](../cpp/doc/mkeclient_integration_examples.md))
 * [client/cpp/doc/mkeclient_integration_examples.pdf](../cpp/doc/mkeclient_integration_examples.pdf)
 
 
@@ -111,4 +111,4 @@ Command               Function
 
 ---
 
- © 2016-2021 MagikEye Inc.
+ © 2016-2022 MagikEye Inc.

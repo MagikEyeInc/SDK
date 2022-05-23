@@ -1,10 +1,11 @@
 <map id="mke::api::MkEReply" name="mke::api::MkEReply">
-<area shape="rect" id="node2" href="$structmke_1_1api_1_1_mk_e_reply__params.html" title="Represents the respective MkE API reply parameters. " alt="" coords="317,201,459,243"/>
-<area shape="rect" id="node3" href="$structmke_1_1api_1_1_mk_e_reply___device_info.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_DEVICE_INFO request. ..." alt="" coords="5,5,147,47"/>
-<area shape="rect" id="node4" href="$structmke_1_1api_1_1_mk_e_reply___firmware_info.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_FIRMWARE_INFO request. " alt="" coords="5,71,147,112"/>
-<area shape="rect" id="node5" href="$structmke_1_1api_1_1_mk_e_reply___server_fatal.html" title="Parameter structure of the sensor&#39;s Reply specifying the general error code MKE_REPLY_SERVER_FATAL_ER..." alt="" coords="5,136,147,177"/>
-<area shape="rect" id="node6" href="$structmke_1_1api_1_1_mk_e_reply___state.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_STATE request. " alt="" coords="5,201,147,243"/>
-<area shape="rect" id="node7" href="$structmke_1_1api_1_1_mk_e_reply___frame.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_FRAME and MKE_REQUEST_START_FRAME_PUSH r..." alt="" coords="5,267,147,308"/>
-<area shape="rect" id="node8" href="$structmke_1_1api_1_1_mk_e_reply___get_policy.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_POLICY request. " alt="" coords="5,332,147,373"/>
-<area shape="rect" id="node9" href="$structmke_1_1api_1_1_mk_e_reply___list_policies.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_LIST_POLICIES request. " alt="" coords="5,397,147,439"/>
+<area shape="rect" id="node1" title="Represents the reply to the MkE API request." alt="" coords="593,209,744,235"/>
+<area shape="rect" id="node2" href="$structmke_1_1api_1_1_mk_e_reply__params.html" title="Represents the respective MkE API reply parameters." alt="" coords="341,201,492,243"/>
+<area shape="rect" id="node3" href="$structmke_1_1api_1_1_mk_e_reply___device_info.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_DEVICE_INFO request." alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node4" href="$structmke_1_1api_1_1_mk_e_reply___firmware_info.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_FIRMWARE_INFO request." alt="" coords="5,71,156,112"/>
+<area shape="rect" id="node5" href="$structmke_1_1api_1_1_mk_e_reply___server_fatal.html" title="Parameter structure of the sensor&#39;s Reply specifying the general error code MKE_REPLY_SERVER_FATAL_ER..." alt="" coords="5,136,156,177"/>
+<area shape="rect" id="node6" href="$structmke_1_1api_1_1_mk_e_reply___state.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_STATE request." alt="" coords="5,201,156,243"/>
+<area shape="rect" id="node7" href="$structmke_1_1api_1_1_mk_e_reply___frame.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_FRAME and MKE_REQUEST_START_FRAME_PUSH r..." alt="" coords="5,267,156,308"/>
+<area shape="rect" id="node8" href="$structmke_1_1api_1_1_mk_e_reply___get_policy.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_GET_POLICY request." alt="" coords="5,332,156,373"/>
+<area shape="rect" id="node9" href="$structmke_1_1api_1_1_mk_e_reply___list_policies.html" title="Parameter structure of the sensor&#39;s Reply to MKE_REQUEST_LIST_POLICIES request." alt="" coords="5,397,156,439"/>
 </map>

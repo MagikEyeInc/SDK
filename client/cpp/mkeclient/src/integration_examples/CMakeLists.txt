@@ -10,6 +10,14 @@ option(MKE_USE_OPEN3D "Build with Open3D support" OFF)
 option(MKE_USE_OPENCV "Build with OpenCV support" OFF)
 option(MKE_ENABLE_VISU "Enable Visualization" OFF)
 
+if(MSVC)
+    set(CMAKE_CXX_FLAGS_RELEASE 
+      "${CMAKE_CXX_FLAGS_RELEASE} /O2 /fp:fast /MT /DNDEBUG")
+
+    set(CMAKE_CXX_FLAGS_DEBUG
+      "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+endif()
+      
 if(MKE_USE_PCL)
 elseif(MKE_USE_OPEN3D)
 elseif(MKE_USE_OPENCV)

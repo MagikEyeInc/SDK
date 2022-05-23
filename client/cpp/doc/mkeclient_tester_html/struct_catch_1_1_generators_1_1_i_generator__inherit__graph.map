@@ -1,12 +1,13 @@
 <map id="Catch::Generators::IGenerator&lt; T &gt;" name="Catch::Generators::IGenerator&lt; T &gt;">
-<area shape="rect" id="node3" href="$class_catch_1_1_generators_1_1_filter_generator.html" title="Catch::Generators::\lFilterGenerator\&lt; T \&gt;" alt="" coords="419,5,559,47"/>
-<area shape="rect" id="node4" href="$class_catch_1_1_generators_1_1_fixed_values_generator.html" title="Catch::Generators::\lFixedValuesGenerator\&lt; T \&gt;" alt="" coords="397,71,580,112"/>
-<area shape="rect" id="node5" href="$class_catch_1_1_generators_1_1_generators.html" title="Catch::Generators::\lGenerators\&lt; T \&gt;" alt="" coords="420,136,557,177"/>
-<area shape="rect" id="node6" href="$class_catch_1_1_generators_1_1_iterator_generator.html" title="Catch::Generators::\lIteratorGenerator\&lt; T \&gt;" alt="" coords="413,201,565,243"/>
-<area shape="rect" id="node7" href="$class_catch_1_1_generators_1_1_map_generator.html" title="Catch::Generators::\lMapGenerator\&lt; T \&gt;" alt="" coords="420,267,557,308"/>
-<area shape="rect" id="node8" href="$class_catch_1_1_generators_1_1_range_generator.html" title="Catch::Generators::\lRangeGenerator\&lt; T \&gt;" alt="" coords="414,332,563,373"/>
-<area shape="rect" id="node9" href="$class_catch_1_1_generators_1_1_repeat_generator.html" title="Catch::Generators::\lRepeatGenerator\&lt; T \&gt;" alt="" coords="412,397,565,439"/>
-<area shape="rect" id="node10" href="$class_catch_1_1_generators_1_1_single_value_generator.html" title="Catch::Generators::\lSingleValueGenerator\&lt; T \&gt;" alt="" coords="399,463,579,504"/>
-<area shape="rect" id="node11" href="$class_catch_1_1_generators_1_1_take_generator.html" title="Catch::Generators::\lTakeGenerator\&lt; T \&gt;" alt="" coords="419,528,559,569"/>
-<area shape="rect" id="node2" href="$class_catch_1_1_generators_1_1_generator_untyped_base.html" title="Catch::Generators::\lGeneratorUntypedBase" alt="" coords="5,267,164,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="228,290,375,331"/>
+<area shape="rect" id="node3" href="$class_catch_1_1_generators_1_1_filter_generator.html" title=" " alt="" coords="451,5,597,61"/>
+<area shape="rect" id="node4" href="$class_catch_1_1_generators_1_1_fixed_values_generator.html" title=" " alt="" coords="423,86,625,127"/>
+<area shape="rect" id="node5" href="$class_catch_1_1_generators_1_1_generators.html" title=" " alt="" coords="451,151,597,193"/>
+<area shape="rect" id="node6" href="$class_catch_1_1_generators_1_1_iterator_generator.html" title=" " alt="" coords="437,217,611,258"/>
+<area shape="rect" id="node7" href="$class_catch_1_1_generators_1_1_map_generator.html" title=" " alt="" coords="444,283,604,339"/>
+<area shape="rect" id="node8" href="$class_catch_1_1_generators_1_1_range_generator.html" title=" " alt="" coords="441,363,607,405"/>
+<area shape="rect" id="node9" href="$class_catch_1_1_generators_1_1_repeat_generator.html" title=" " alt="" coords="439,429,609,470"/>
+<area shape="rect" id="node10" href="$class_catch_1_1_generators_1_1_single_value_generator.html" title=" " alt="" coords="423,494,625,535"/>
+<area shape="rect" id="node11" href="$class_catch_1_1_generators_1_1_take_generator.html" title=" " alt="" coords="447,559,601,601"/>
+<area shape="rect" id="node2" href="$class_catch_1_1_generators_1_1_generator_untyped_base.html" title=" " alt="" coords="5,290,180,331"/>
 </map>

@@ -1,3 +1,5 @@
 <map id="mke::cli::BadReplyError" name="mke::cli::BadReplyError">
-<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error. " alt="" coords="45,80,127,107"/>
+<area shape="rect" id="node1" title="Exception for bad reply from Device." alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error." alt="" coords="48,80,137,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,5,162,32"/>
 </map>

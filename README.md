@@ -1,12 +1,12 @@
 ![](mke-banner.png "Magik Eye Banner")
 
-# MkE SDK v1.1.2
+# MkE SDK v1.1.3
 
-This is MkE SDK v1.1.2
+This is MkE SDK v1.1.3
 
 For the description of MkE API see:
 
-* [mkeapi/doc/html/index.html](mkeapi/doc/html/index.html)
+* [mkeapi/doc/html/index.html](mkeapi/doc/html/index.html) ([mkeapi.md](mkeapi/doc/README.md))
 * [mkeapi/doc/mkeapi.pdf](mkeapi/doc/mkeapi.pdf)
 
 For a C++ implementation of an MkE API client see:
@@ -35,7 +35,7 @@ For C++ and Python implementations of a ROS2 point cloud publisher node:
 
 ## Licence
 
-Copyright (c) 2016-2021, Magik-Eye Inc.
+Copyright (c) 2016-2022, Magik-Eye Inc.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:

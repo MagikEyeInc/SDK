@@ -3,14 +3,13 @@ var indexSectionsWithContent =
   0: "_abcdefghilmnprstuw~",
   1: "abcdefilmprst",
   2: "m",
-  3: "bcdefilmprst",
+  3: "bcdefilmprt",
   4: "abcdefghilmprstu~",
   5: "abcdefhilmnprstu",
   6: "abdefhilprs",
   7: "aflps",
   8: "_airsu",
-  9: "acdfhmpstw",
-  10: "m"
+  9: "fmtw"
 };
 
 var indexSectionNames =
@@ -24,8 +23,7 @@ var indexSectionNames =
   6: "typedefs",
   7: "enums",
   8: "enumvalues",
-  9: "defines",
-  10: "groups"
+  9: "defines"
 };
 
 var indexSectionLabels =
@@ -39,7 +37,6 @@ var indexSectionLabels =
   6: "Typedefs",
   7: "Enumerations",
   8: "Enumerator",
-  9: "Macros",
-  10: "Modules"
+  9: "Macros"
 };
 

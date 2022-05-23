@@ -1,10 +1,11 @@
 <map id="mke::api::MkERequest" name="mke::api::MkERequest">
-<area shape="rect" id="node2" href="$structmke_1_1api_1_1_mk_e_request___params.html" title="Represents the respective MkE API request parameters. " alt="" coords="985,136,1141,177"/>
-<area shape="rect" id="node3" href="$structmke_1_1api_1_1_mk_e_request___set_state.html" title="Parameter structure of the MKE_REQUEST_SET_STATE request. " alt="" coords="672,5,828,47"/>
-<area shape="rect" id="node4" href="$structmke_1_1api_1_1_mk_e_request___terminate.html" title="Parameter structure of the MKE_REQUEST_TERMINATE request. " alt="" coords="672,71,828,112"/>
-<area shape="rect" id="node5" href="$structmke_1_1api_1_1_mk_e_request___set_policy.html" title="Parameter structure of the MKE_REQUEST_SET_POLICY. " alt="" coords="672,136,828,177"/>
-<area shape="rect" id="node6" href="$structmke_1_1api_1_1_mk_e_request___get_frame.html" title="Parameter structure of the MKE_REQUEST_GET_FRAME and MKE_REQUEST_START_FRAME_PUSH requests..." alt="" coords="672,201,828,243"/>
-<area shape="rect" id="node7" href="$structmke_1_1api_1_1_mk_e_request___dynamic.html" title="mke::api::MkERequest\l_Dynamic" alt="" coords="672,267,828,308"/>
-<area shape="rect" id="node8" href="$unionmke_1_1api_1_1_mk_e_request___dynamic___params.html" title="mke::api::MkERequest\l_Dynamic_Params" alt="" coords="420,267,576,308"/>
-<area shape="rect" id="node9" href="$structmke_1_1api_1_1_mk_e_request___upload_package___dynamic_params.html" title="Represents the MkE API Dynamic request. " alt="" coords="5,267,231,308"/>
+<area shape="rect" id="node1" title="Represents the MkE API request." alt="" coords="1329,143,1496,170"/>
+<area shape="rect" id="node2" href="$structmke_1_1api_1_1_mk_e_request___params.html" title="Represents the respective MkE API request parameters." alt="" coords="1061,136,1228,177"/>
+<area shape="rect" id="node3" href="$structmke_1_1api_1_1_mk_e_request___set_state.html" title="Parameter structure of the MKE_REQUEST_SET_STATE request." alt="" coords="721,5,888,47"/>
+<area shape="rect" id="node4" href="$structmke_1_1api_1_1_mk_e_request___terminate.html" title="Parameter structure of the MKE_REQUEST_TERMINATE request." alt="" coords="721,71,888,112"/>
+<area shape="rect" id="node5" href="$structmke_1_1api_1_1_mk_e_request___set_policy.html" title="Parameter structure of the MKE_REQUEST_SET_POLICY." alt="" coords="721,136,888,177"/>
+<area shape="rect" id="node6" href="$structmke_1_1api_1_1_mk_e_request___get_frame.html" title="Parameter structure of the MKE_REQUEST_GET_FRAME and MKE_REQUEST_START_FRAME_PUSH requests." alt="" coords="721,201,888,243"/>
+<area shape="rect" id="node7" href="$structmke_1_1api_1_1_mk_e_request___dynamic.html" title=" " alt="" coords="721,267,888,308"/>
+<area shape="rect" id="node8" href="$unionmke_1_1api_1_1_mk_e_request___dynamic___params.html" title=" " alt="" coords="453,267,620,308"/>
+<area shape="rect" id="node9" href="$structmke_1_1api_1_1_mk_e_request___upload_package___dynamic_params.html" title="Represents the MkE API Dynamic request." alt="" coords="5,267,247,308"/>
 </map>

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../../mke.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>python-client-README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../mke.css" />
 </head>
 <body>
-<figure>
-<img src="../../mke-banner.png" title="Magik Eye Banner" />
-</figure>
+<p><img src="../../mke-banner.png" title="Magik Eye Banner" /></p>
 <h1 id="python-client-for-mke-api">Python Client for MkE API</h1>
 <p>The MkE SDK contains <code>pymkeapi</code>, a Python (version 3.x) package that implements an MkE API client. It also contains several examples of the MkE API client code implementation and communication.</p>
-<p>The package is distributed in the form of a <a href="pymkeapi-1.2.4-py3-none-any.whl">Python wheel</a> which can be easily installed--along with its dependencies--using the <code>pip3</code> tool:</p>
+<p>The package is distributed in the form of a <a href="pymkeapi-1.2.4-py3-none-any.whl">Python wheel</a> which can be easily installed–along with its dependencies–using the <code>pip3</code> tool:</p>
 <pre><code>$ pip3 install pymkeapi-1.2.4-py3-none-any.whl</code></pre>
 <p>The <code>pymkeapi</code> package contains the <code>SyncClient</code> class, which is a thin wrapper over the MkE API with an almost 1:1 correspondence between the API requests and the <code>SyncClient</code> methods. See the following HTML or PDF files for the documentation of the <code>pymkeapi.SyncClient</code> class:</p>
 <ul>
-<li><a href="doc/pysyncclient.html">client/python/doc/pysyncclient.html</a></li>
+<li><a href="doc/pysyncclient.html">client/python/doc/pysyncclient.html</a> (<a href="doc/README.md">README.md</a>)</li>
 <li><a href="doc/pysyncclient.pdf">client/python/doc/pysyncclient.pdf</a></li>
 </ul>
 <h2 id="example-codes">Example codes</h2>
@@ -32,10 +34,10 @@
 <blockquote>
 <p><strong>Note:</strong> All request and related reply datagrams are immediately printed in the RAW format.</p>
 </blockquote>
-<table style="width:86%;">
+<table style="width:88%;">
 <colgroup>
 <col style="width: 30%" />
-<col style="width: 55%" />
+<col style="width: 56%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -64,10 +66,10 @@
 </table>
 <h3 id="example-usage-of-the-syncclient-client">Example usage of the <code>SyncClient</code> client</h3>
 <p>These examples use Python MkE API implementation <code>SyncClient</code>.</p>
-<table style="width:86%;">
+<table style="width:88%;">
 <colgroup>
 <col style="width: 30%" />
-<col style="width: 55%" />
+<col style="width: 56%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -98,13 +100,13 @@
 </ul>
 <p>Information about required dependencies to run these examples may be found in:</p>
 <ul>
-<li><a href="../cpp/doc/mkeclient_integration_examples.html">client/cpp/doc/mkeclient_integration_examples.html</a></li>
+<li><a href="../cpp/doc/mkeclient_integration_examples.html">client/cpp/doc/mkeclient_integration_examples.html</a> (<a href="../cpp/doc/mkeclient_integration_examples.md">mkeclient_integration_examples.md</a>)</li>
 <li><a href="../cpp/doc/mkeclient_integration_examples.pdf">client/cpp/doc/mkeclient_integration_examples.pdf</a></li>
 </ul>
-<table style="width:86%;">
+<table style="width:88%;">
 <colgroup>
 <col style="width: 30%" />
-<col style="width: 55%" />
+<col style="width: 56%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -131,6 +133,6 @@
 </tr>
 </tbody>
 </table>
-<p>© 2016-2021 MagikEye Inc.</p>
+<p>© 2016-2022 MagikEye Inc.</p>
 </body>
 </html>

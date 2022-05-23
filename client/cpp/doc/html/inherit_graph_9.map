@@ -1,6 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classmke_1_1cli_1_1_server_fatal_error.html" title="Exception for server fatal error. Device is in fail&#45;safe mode. " alt="" coords="5,31,176,57"/>
-<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error. " alt="" coords="224,31,307,57"/>
-<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_bad_reply_error.html" title="Exception for bad reply from Device. " alt="" coords="355,5,516,32"/>
-<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_i_o_error.html" title="Exception wrapping boost::asio communication error. Once the error appears you need to restart commun..." alt="" coords="376,56,495,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error." alt="" coords="192,56,281,83"/>
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_bad_reply_error.html" title="Exception for bad reply from Device." alt="" coords="335,5,509,32"/>
+<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_i_o_error.html" title="Exception wrapping boost::asio communication error. Once the error appears you need to restart commun..." alt="" coords="359,56,485,83"/>
+<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_server_fatal_error.html" title="Exception for server fatal error. Device is in fail&#45;safe mode." alt="" coords="329,107,515,133"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="mke::cli::Client" name="mke::cli::Client">
-<area shape="rect" id="node2" href="$classmke_1_1cli_1_1priv_1_1_raw_client.html" title="RawClient wraps communication protocol with the MagikEye sensor independently to a bus type..." alt="" coords="144,200,311,227"/>
-<area shape="rect" id="node3" href="$classmke_1_1memory_1_1_mem_pool.html" title="mke::memory::MemPool\l\&lt; mke::api::MkERequest \&gt;" alt="" coords="5,96,185,137"/>
-<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="209,103,339,130"/>
+<area shape="rect" id="node1" title="Client class provides simple interface for interaction with Device via MkE API. After successful conn..." alt="" coords="141,289,259,316"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1priv_1_1_raw_client.html" title="RawClient wraps communication protocol with the MagikEye sensor independently to a bus type." alt="" coords="111,200,289,227"/>
+<area shape="rect" id="node3" href="$classmke_1_1memory_1_1_mem_pool.html" title=" " alt="" coords="5,96,203,137"/>
+<area shape="rect" id="node4" title=" " alt="" coords="23,5,185,47"/>
+<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="227,103,365,130"/>
 </map>

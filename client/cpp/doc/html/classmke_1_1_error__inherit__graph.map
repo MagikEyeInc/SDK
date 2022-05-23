@@ -1,5 +1,7 @@
 <map id="mke::Error" name="mke::Error">
-<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_bad_reply_error.html" title="Exception for bad reply from Device. " alt="" coords="5,155,167,181"/>
-<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_i_o_error.html" title="Exception wrapping boost::asio communication error. Once the error appears you need to restart commun..." alt="" coords="191,155,309,181"/>
-<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_server_fatal_error.html" title="Exception for server fatal error. Device is in fail&#45;safe mode. " alt="" coords="334,155,505,181"/>
+<area shape="rect" id="node1" title="Base MkE Client error." alt="" coords="223,80,312,107"/>
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_bad_reply_error.html" title="Exception for bad reply from Device." alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_i_o_error.html" title="Exception wrapping boost::asio communication error. Once the error appears you need to restart commun..." alt="" coords="204,155,331,181"/>
+<area shape="rect" id="node5" href="$classmke_1_1cli_1_1_server_fatal_error.html" title="Exception for server fatal error. Device is in fail&#45;safe mode." alt="" coords="355,155,540,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="198,5,337,32"/>
 </map>

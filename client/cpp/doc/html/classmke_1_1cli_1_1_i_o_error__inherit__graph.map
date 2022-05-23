@@ -1,3 +1,5 @@
 <map id="mke::cli::IOError" name="mke::cli::IOError">
-<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error. " alt="" coords="26,80,109,107"/>
+<area shape="rect" id="node1" title="Exception wrapping boost::asio communication error. Once the error appears you need to restart commun..." alt="" coords="11,155,138,181"/>
+<area shape="rect" id="node2" href="$classmke_1_1_error.html" title="Base MkE Client error." alt="" coords="30,80,119,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,144,32"/>
 </map>

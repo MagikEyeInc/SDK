@@ -1,5 +1,6 @@
 <map id="mke::cli::SerialClient" name="mke::cli::SerialClient">
-<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_serial_bus.html" title="SerialBus class handles connection to a device via serial port. " alt="" coords="5,80,137,107"/>
-<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="7,5,136,32"/>
-<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_client.html" title="Client class provides simple interface for interaction with Device via MkE API. After successful conn..." alt="" coords="162,80,274,107"/>
+<area shape="rect" id="node1" title="SerialClient &#45; a client with serial port bus." alt="" coords="76,155,232,181"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_serial_bus.html" title="SerialBus class handles connection to a device via serial port." alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="8,5,145,32"/>
+<area shape="rect" id="node4" href="$classmke_1_1cli_1_1_client.html" title="Client class provides simple interface for interaction with Device via MkE API. After successful conn..." alt="" coords="172,80,293,107"/>
 </map>

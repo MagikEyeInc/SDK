@@ -14,10 +14,6 @@
 namespace mke {
 namespace memory {
 
-/** \addtogroup mkecli
- *  @{
- */
-
 /**
  * @brief Implements a thread-safe pool of pointers.
  * Pool does not take unique ownership of the pointer
@@ -128,8 +124,6 @@ class PointerPool
   PointerPool& operator=(const PointerPool&); //
 };
 
-
-/** @}*/
 
 } /* namespace memory */
 } /* namespace mke */

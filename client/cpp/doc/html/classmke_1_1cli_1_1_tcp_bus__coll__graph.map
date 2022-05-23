@@ -1,3 +1,4 @@
 <map id="mke::cli::TcpBus" name="mke::cli::TcpBus">
-<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node1" title="TcpBus class handles connection to a device via TCP/IP protocol." alt="" coords="11,80,137,107"/>
+<area shape="rect" id="node2" href="$classmke_1_1cli_1_1_base_bus.html" title="BaseBus class only defines general interface for a connection. Please refer to TcpBus or SerialBus fo..." alt="" coords="5,5,143,32"/>
 </map>

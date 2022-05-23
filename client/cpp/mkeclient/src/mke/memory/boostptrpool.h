@@ -17,10 +17,6 @@
 namespace mke {
 namespace memory {
 
-/** \addtogroup mkecli
- *  @{
- */
-
 /**
  * @brief Implements a thread-safe memory pool of pointers. Once a pointer
  * is added into the memory pool via the `add` method,
@@ -164,8 +160,6 @@ class BoostPointerPool
   BoostPointerPool& operator=(const BoostPointerPool&); //
 };
 
-
-/** @}*/
 
 } /* namespace memory */
 } /* namespace mke */

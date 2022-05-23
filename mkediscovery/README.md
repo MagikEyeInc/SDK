@@ -6,4 +6,4 @@ When Ethernet and TCP connections are supported by a sensor, the sensor can also
 
 ---
 
- © 2016-2021 MagikEye Inc.
+ © 2016-2022 MagikEye Inc.

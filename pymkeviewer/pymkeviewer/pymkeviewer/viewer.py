@@ -170,6 +170,15 @@ class Ui_MainWindow(object):
         self.checkBoxAxis.setObjectName(u"checkBoxAxis")
         self.checkBoxAxis.setGeometry(QRect(30, 350, 171, 25))
         self.dockWidget_2.setWidget(self.dockWidgetContents_2)
+        self.label_5 = QLabel(self.dockWidgetContents_2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, 560, 100, 17))
+        self.comboBox_1 = QComboBox(self.dockWidgetContents_2)
+        self.comboBox_1.addItem("None")
+        self.comboBox_1.setObjectName(u"comboBox_1")
+        self.comboBox_1.setGeometry(QRect(120, 560, 86, 25))
+        self.groupBox.setStyleSheet(
+            u"color: rgb(255, 255, 255); background-color: rgb(46, 52, 54);")
         MainWindow.addDockWidget(Qt.RightDockWidgetArea, self.dockWidget_2)
         # Dock Window and Dock window elements initialisation :: End
 
@@ -253,6 +262,8 @@ class Ui_MainWindow(object):
         self.sensor_fps.setText(
             QCoreApplication.translate(
                 "MainWindow", u"Frames sensed/s: None", None))
+        self.label_5.setText(QCoreApplication.translate(
+            "MainWindow",u"Policy Selection", None))
     # retranslateUi
 
     # =========================================================================
@@ -274,6 +285,7 @@ class Ui_MainWindow(object):
             self.dockWidget_2.show()
         else:
             self.dockWidget_2.close()
+
     # =========================================================================
 
     def openglLoaded(self):

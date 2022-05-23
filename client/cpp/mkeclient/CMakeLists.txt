@@ -37,7 +37,7 @@ if(MSVC)
       "${CMAKE_CXX_FLAGS_RELEASE} /O2 /fp:fast /MT /DNDEBUG")
 
     set(CMAKE_CXX_FLAGS_DEBUG
-      "${CMAKE_CXX_FLAGS_DEBUG} /MT")
+      "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
       
 else()
     set(CMAKE_CXX_FLAGS
